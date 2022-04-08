@@ -1,5 +1,5 @@
 {% set name = "mkdocs-gen-files" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0bfe82ecb62b3d2064349808c898063ad955a77804436e0a54fa029414c893bb
+  sha256: c69188486bdc1e74bd2b9b7ebbde9f9eb21052ae7762f1b35420cfbfc6d7122e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
