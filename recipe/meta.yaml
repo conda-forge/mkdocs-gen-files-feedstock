@@ -1,5 +1,5 @@
 {% set name = "mkdocs-gen-files" %}
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c69188486bdc1e74bd2b9b7ebbde9f9eb21052ae7762f1b35420cfbfc6d7122e
+  sha256: d90d9e1676531a0bb96b1287dc28aa41162986de4dc3c00400214724761ff6ef
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - mkdocs >=1.0.3,<2
+    - mkdocs <2.0.0,>=1.0.3
 
 test:
   imports:
