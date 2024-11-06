@@ -1,11 +1,11 @@
-About mkdocs-gen-files
-======================
+About mkdocs-gen-files-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mkdocs-gen-files-feedstock/blob/main/LICENSE.txt)
 
 Home: https://oprypin.github.io/mkdocs-gen-files/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mkdocs-gen-files-feedstock/blob/main/LICENSE.txt)
 
 Summary: MkDocs plugin to programmatically generate documentation pages during the build
 
