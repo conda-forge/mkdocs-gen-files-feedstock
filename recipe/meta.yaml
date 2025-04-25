@@ -1,33 +1,36 @@
 {% set name = "mkdocs-gen-files" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 377bff8ee8e93515916689f483d971643f83a94eed7e92318854da8f344f0163
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 4c7cf256b5d67062a788f6b1d035e157fc1a9498c2399be9af5257d4ff4d19bc
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
   number: 0
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - gen-files = mkdocs_gen_files.plugin:GenFilesPlugin
 
 requirements:
   host:
-    - python >=3.7
-    - poetry
+    - python {{ python_min }}
+    - hatchling
     - pip
   run:
-    - python >=3.7
-    - mkdocs <2.0.0,>=1.0.3
+    - python >={{ python_min }}
+    - mkdocs >=1.4.1
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - mkdocs_gen_files
-  requires:
-    - pip
   commands:
     - pip check
 
@@ -44,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - cpcloud
+    - dhirschfeld
