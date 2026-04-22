@@ -5,7 +5,7 @@
 
 [workspace]
 name = "mkdocs-gen-files-feedstock"
-version = "3.53.2"  # conda-smithy version used to generate this file
+version = "3.56.3"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/mkdocs-gen-files-feedstock"
 authors = ["@conda-forge/mkdocs-gen-files"]
 channels = ["conda-forge"]

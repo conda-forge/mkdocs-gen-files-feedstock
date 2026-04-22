@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: mkdocs-gen-files
-  version: "0.6.0"
+  version: 0.6.1
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 52022dc14dcc0451e05e54a8f5d5e7760351b6701eff816d1e9739577ec5635e
+  sha256: 57d7ff2229e23d077e46d14a33db6d37c8823f6ce1a503c874c1764a71679763
 
 build:
   number: 0
@@ -28,8 +28,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - mkdocs >=1.4.1
-
+    - mkdocs >=1.4.1,<=1.6.1
+    - properdocs >=1.6.5
 tests:
   - python:
       pip_check: true
